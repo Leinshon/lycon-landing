@@ -237,6 +237,11 @@ button {
     gap: var(--spacing-sm);
 }
 
+.header-actions .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
 .btn-login {
     font-size: 0.9375rem;
     font-weight: 500;
@@ -2521,7 +2526,7 @@ button {
    ============================================= */
 .pricing {
     padding: var(--spacing-xxxl) 0;
-    background: var(--color-bg-secondary);
+    background: var(--color-bg-primary);
 }
 
 .pricing-grid {
