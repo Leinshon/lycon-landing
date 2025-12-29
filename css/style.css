@@ -360,6 +360,7 @@ button {
     padding-top: var(--header-height);
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
     background: var(--color-bg-primary);
@@ -370,6 +371,7 @@ button {
 }
 
 .hero-container {
+    width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--spacing-xl) var(--spacing-sm);
@@ -377,6 +379,7 @@ button {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     align-items: center;
+    justify-items: center;
     position: relative;
     z-index: 1;
 }
@@ -430,14 +433,14 @@ button {
     font-size: clamp(2rem, 6vw, 3.75rem);
     font-weight: 700;
     color: var(--color-text-primary);
-    line-height: 1.15;
+    line-height: 1.5;
     margin-bottom: var(--spacing-md);
     letter-spacing: -0.03em;
 }
 
 @media (min-width: 480px) {
     .hero-title {
-        line-height: 1.1;
+        line-height: 1.4;
         margin-bottom: var(--spacing-lg);
     }
 }
@@ -1905,15 +1908,15 @@ button {
 .result-difference {
     text-align: center;
     padding: var(--spacing-md);
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    background: #F3F7FF;
     border-radius: var(--radius-lg);
-    border: 1px solid #fbbf24;
+    border: 1px solid #A8C4F5;
 }
 
 .result-difference .difference-label {
     display: block;
     font-size: 0.85rem;
-    color: #92400e;
+    color: #355CDE;
     margin-bottom: var(--spacing-xs);
 }
 
@@ -1921,7 +1924,7 @@ button {
     display: block;
     font-size: 1.5rem;
     font-weight: 800;
-    color: #b45309;
+    color: #355CDE;
 }
 
 /* Final Result Card - Responsive */
@@ -3202,36 +3205,24 @@ input[type="range"]::-moz-range-thumb:hover {
     }
 
     .hero-container {
-        grid-template-columns: 1fr 400px;
+        grid-template-columns: 1fr;
         gap: var(--spacing-xl);
-        padding: var(--spacing-xl) var(--spacing-lg);
+        padding: var(--spacing-xxl) var(--spacing-lg);
+        justify-items: center;
     }
 
     .hero-content {
-        text-align: left;
-        min-width: 0;
-    }
-
-    .hero-image {
-        flex-shrink: 0;
-    }
-
-    .hero-image-placeholder {
-        width: 400px;
-        height: 400px;
+        text-align: center;
+        width: 100%;
     }
 
     .hero-subtitle {
-        margin-left: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-cta {
-        justify-content: flex-start;
-    }
-
-    .hero-image-img {
-        width: 400px;
-        max-width: 400px;
+        justify-content: center;
     }
 
     .testimonials-grid {

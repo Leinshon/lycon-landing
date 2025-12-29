@@ -442,8 +442,8 @@ function initCalculatorModal() {
 
         // If initial investment grows enough, no monthly payment needed
         if (remainingTarget <= 0) {
-            const profit = TARGET_AMOUNT - initialInvestment;
-            return { monthlyPayment: 0, monthlyTotal: 0, initialGrowth: initialFV, profit: profit, initialInvestment: initialInvestment };
+            const profit = initialFV - initialInvestment;
+            return { monthlyPayment: 0, monthlyTotal: 0, initialGrowth: initialFV, profit: profit, totalAmount: initialFV, initialInvestment: initialInvestment };
         }
 
         // Monthly payment needed for the remaining amount
@@ -477,7 +477,13 @@ function initCalculatorModal() {
             }
             modalTotalPrincipal.textContent = formatToEok(result.monthlyTotal);
             modalTotalProfit.textContent = '+' + formatToEok(result.profit);
-            modalTotalAmount.textContent = '10억원';
+
+            // 10억원 초과시 실제 합계 표시
+            if (result.totalAmount && result.totalAmount > TARGET_AMOUNT) {
+                modalTotalAmount.textContent = formatToEok(result.totalAmount);
+            } else {
+                modalTotalAmount.textContent = '10억원';
+            }
         } else {
             modalMonthlyAmount.textContent = '-';
             modalTotalPrincipal.textContent = '-';
